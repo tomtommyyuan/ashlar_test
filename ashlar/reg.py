@@ -1361,7 +1361,8 @@ class TiffListWriter:
                     tiff.write(
                         data=img,
                         software=software.encode("utf-8"),
-                        resolution=(resolution_cm, resolution_cm, "centimeter"),
+                        resolution=(resolution_cm, resolution_cm),
+                        resolutionunit="centimeter",
                         # FIXME Propagate this from input files (especially RGB).
                         photometric="minisblack",
                     )
